@@ -1,5 +1,5 @@
 
-# Corpus Statistics Lab
+# Corpus Statistics - Lab
 
 ## Introduction
 
@@ -51,7 +51,7 @@ Write your answer below this line:
 _______________________________________________________________________________
 
 
-#### Preprocessing the Data
+### Preprocessing the Data
 
 Looking at the text output above shows us a few things that we'll need to deal with during the preprocessing and tokenization steps--specifically:
 
@@ -77,7 +77,7 @@ Great! Now that we have our tokens, we need to lowercase them. In the cell below
 macbeth_tokens = None
 ```
 
-### Frequency Distributions
+## Frequency Distributions
 
 Now that we've created done some basic cleaning and tokenization, let's go ahead and create a **_Frequency Distribution_** to see the number of times each word is used in this play. This frequency distribution is an example of a **_Bag of Words_**, which you've worked with in previous labs. 
 
@@ -94,7 +94,7 @@ macbeth_freqdist.most_common(50)
 
 Well, that doesn't tell us very much! The top 10 most used words in macbeth are all **_Stop Words_**. They don't contain any interesting information, and essentially just act as the "connective tissue" between the words that really matter in any text. Let's try removing the stopwords and punctuation, and then creating another another frequency distribution that contains only the important words. 
 
-### Removing Stop Words and Punctuation
+## Removing Stop Words and Punctuation
 
 We've already imported the `stopwords` module. We can access all of the stopwords using the `stopwords.words()` method--however, we don't want to use the whole thing, as this contains all stopwords in every language supported by NLTK. We don't need to check for check for and remove any Finnish or Japanese stop words, as this text is in English. To avoid unnecessarily long runtimes, we'll just use the English subset of stopwords by passing in the parameter `"english"` into `stopwords.words()`.
 
@@ -126,17 +126,17 @@ macbeth_stopped_freqdist.most_common(50)
 
 This is definitely an improvement! You may be wondering why `'Macb'` shows up as the number 1 most used token. If you inspect [Macbeth](http://www.gutenberg.org/cache/epub/1795/pg1795-images.html) on project gutenberg and search for `'Macb'`, you'll soon discover that the source text denotes `Macb` as stage direction for any line spoken by Macbeth's character. This means that `'Macb'` is actually stage direction, meaning that under normal circumstances, we would need to ask ourselves if it is worth it to remove it or keep it. In the interest of time for this lab, we'll leave it be. 
 
-### Answering Questions about our Corpus
+## Answering Questions about our Corpus
 
 Now that we have a Frequency Distribution, we can easily answer some basic questions about the text. Let's answer some basic questions about Macbeth below, before we move onto creating bigrams. 
 
-#### Vocabulary Size
+### Vocabulary Size
 
 what is size of the total vocabulary used in Macbeth, once all stopwords have been removed?
 
 Compute this in the cell below. 
 
-#### Normalized Word Frequency
+### Normalized Word Frequency
 
 Knowing the frequency with which each word is used is somewhat informative, but without the context of how many words are in used in total, it doesn't tell us much. One way we can adjust for this is to use **_Normalized Word Frequency_**, which we can compute by dividing each word frequency by the total number of words. 
 
@@ -152,7 +152,7 @@ for word in macbeth_top_50:
     print("{} \t\t\t {:.4}".format(None, None))
 ```
 
-### Creating Bigrams
+## Creating Bigrams
 
 Knowing individual word frequencies is somewhat informative, but in practice, some of these tokens are actually parts of larger phrases that should be treated as a single unit. Let's create some bigrams, and see which combinations of words are most telling. 
 
@@ -182,7 +182,7 @@ These look a bit more interesting. We can see here that some of the most common 
 
 To wrap up our initial examination of _Macbeth_, let's end by calculating **_Mutual Information Scores_**.
 
-### Using Mutual Information Scores
+## Using Mutual Information Scores
 
 To calculate Mutual Information Scores, we'll need to first create a frequency filter, so that we only examine bigrams that occur more than a set number of times--for our purposes, we'll set this limit to 5. 
 
@@ -205,7 +205,7 @@ macbeth_pmi_finder = None
 macbeth_pmi_scored = None
 ```
 
-### On Your Own: Comparative Corpus Statistics
+## On Your Own: Comparative Corpus Statistics
 
 Now that we've worked through generating some baseline corpus statistics for one corpus, it's up to you to select a second corpus and generate your own corpus statistics, and then compare and contrast the two. For simplicity's sake, we recommend you stick to a corpus from `nltk.corpus.gutenberg`--although comparing the diction found in a classic work of fiction to something like a presidential State of the Union address could be interesting, it's not really an apples-to-apples comparison, and those corpora could also require additional preprocessing steps that are outside the scope of this lab. 
 
@@ -217,6 +217,6 @@ In the cells below:
 <br>   
 3. Perform a comparative analysis using the Macbeth statistics we generated above and your new corpus statistics. How are they similar? How are they different? Was there anything interesting or surprising that you found in your comparison? Create at least 1 meaningful visualization comparing the two corpora.
 
-# Summary
+## Summary
 
 In this lab, we used our newfound NLP skills to generate some statistics specific to text data, and used them to compare 2 different works! 
