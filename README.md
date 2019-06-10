@@ -92,7 +92,7 @@ macbeth_freqdist = None
 macbeth_freqdist.most_common(50)
 ```
 
-Well, that doesn't tell us very much! The top 10 most used words in macbeth are all **_Stop Words_**. They don't contain any interesting information, and essentially just act as the "connective tissue" between the words that really matter in any text. Let's try removing the stopwords and punctuation, and then creating another another frequency distribution that contains only the important words. 
+Well, that doesn't tell us very much! The top 10 most used words in macbeth are all **_Stop Words_**. They don't contain any interesting information, and essentially just act as the "connective tissue" between the words that really matter in any text. Let's try removing the stopwords and punctuation, and then creating another frequency distribution that contains only the important words. 
 
 ## Removing Stop Words and Punctuation
 
@@ -132,13 +132,13 @@ Now that we have a Frequency Distribution, we can easily answer some basic quest
 
 ### Vocabulary Size
 
-what is size of the total vocabulary used in Macbeth, once all stopwords have been removed?
+what is the size of the total vocabulary used in Macbeth, once all stopwords have been removed?
 
 Compute this in the cell below. 
 
 ### Normalized Word Frequency
 
-Knowing the frequency with which each word is used is somewhat informative, but without the context of how many words are in used in total, it doesn't tell us much. One way we can adjust for this is to use **_Normalized Word Frequency_**, which we can compute by dividing each word frequency by the total number of words. 
+Knowing the frequency with which each word is used is somewhat informative, but without the context of how many words are used in total, it doesn't tell us much. One way we can adjust for this is to use **_Normalized Word Frequency_**, which we can compute by dividing each word frequency by the total number of words. 
 
 Compute this now in the cell below, and display the normalized word frequency for the top 50 words. 
 
