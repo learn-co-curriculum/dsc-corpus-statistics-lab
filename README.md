@@ -34,7 +34,7 @@ To see the file ids for each of the corpora inside of `gutenberg`, we can call t
 file_ids = None
 ```
 
-Great! For the first part of this lab, we'll be working with Shakespeare's _Macbeth_, a lighthearted romantic comedy about a pair of ambitious social climbers. 
+Great! For the first part of this lab, we'll be working with Shakespeare's _Macbeth_, a tragedy about a pair of ambitious social climbers. 
 
 To load the actual corpus, we need to pass in the file id for macbeth into `gutenberg.raw()`. 
 
@@ -50,6 +50,7 @@ macbeth_text = None
 Write your answer below this line:
 _______________________________________________________________________________
 
+Yes, there are. Some of the words are hyphenated. If we just use basic tokenization, then it split hyphenated words into individual tokens. There are also numbers that act as metadata about which witch is speaking--we'll need to remove these. 
 
 ### Preprocessing the Data
 
@@ -62,7 +63,7 @@ Looking at the text output above shows us a few things that we'll need to deal w
 In the cell below:
 
 * Store the pattern shown above in the appropriate variable. 
-* Use `nltk.regex_tokenize` and pass in our text, and the `pattern`
+* Use `nltk.regepx_tokenize` and pass in our text, and the `pattern`
 
 
 ```python
@@ -158,7 +159,7 @@ Knowing individual word frequencies is somewhat informative, but in practice, so
 
 In the cell below:
 
-* We'll begin by aliasing a particularly long method name to make it easier to call. Store `nltk.collocations.BigramAssociationMeasures()` inside of the variable `bigram_measures`.
+* We'll begin by aliasing a particularly long method name to make it easier to call. Store `nltk.collocations.BigramAssocMeasures()` inside of the variable `bigram_measures`.
 * Next, we'll need to create a **_finder_**. Pass `macbeth_words_stopped` into `BigramCollocationFinder.from_words()` and store the result returned inside of `macbeth_finder`.
 * Once we have a finder, we can use it to compute bigram scores, so we can see the combinations that occur most frequently. Call the `macbeth_finder` object's `score_ngrams()` method and pass in `bigram_measures.raw_freq` as the input. 
 * Display first 50 elements in the `macbeth_scored` list to see the 50 most common bigrams in macbeth. 
