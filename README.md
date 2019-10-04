@@ -147,7 +147,7 @@ Looking at the text output above shows us a few things that we'll need to deal w
 In the cell below:
 
 * Store the pattern shown above in the appropriate variable. 
-* Use `nltk.regepx_tokenize` and pass in our text, and the `pattern`
+* Use `nltk.regexp_tokenize` and pass in our text, and the `pattern`
 
 
 ```python
@@ -580,6 +580,41 @@ In the cells below:
 2. Clean, preprocess, tokenize, and generate corpus statistics for this new corpus.   
 <br>   
 3. Perform a comparative analysis using the Macbeth statistics we generated above and your new corpus statistics. How are they similar? How are they different? Was there anything interesting or surprising that you found in your comparison? Create at least 1 meaningful visualization comparing the two corpora.
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
 
 ## Summary
 
