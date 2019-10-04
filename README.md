@@ -165,7 +165,7 @@ Looking at the text output above shows us a few things that we'll need to deal w
 In the cell below:
 
 * Store the pattern shown above in the appropriate variable. 
-* Use `nltk.regepx_tokenize` and pass in our text, and the `pattern`
+* Use `nltk.regexp_tokenize` and pass in our text, and the `pattern`
 
 
 ```python
