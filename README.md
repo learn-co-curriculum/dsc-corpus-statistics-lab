@@ -25,6 +25,11 @@ In the cell below:
 * Import `FreqDist` and `word_tokenize` from `nltk`
 * Import the `string` and `re` libraries
 
+
+```python
+
+```
+
 Now, let's take a look at the corpora available to us. There are many, many corpora available inside of nltk's `corpus` module. For this lab, we'll make use of the texts contained with `corpus.gutenberg`-- 18 different (complete) corpora that can be found on the [Project Gutenberg](https://www.gutenberg.org/) website. 
 
 To see the file ids for each of the corpora inside of `gutenberg`, we can call the `.fileids()` method. Do this now in the cell below.
@@ -63,7 +68,7 @@ Looking at the text output above shows us a few things that we'll need to deal w
 In the cell below:
 
 * Store the pattern shown above in the appropriate variable. 
-* Use `nltk.regepx_tokenize` and pass in our text, and the `pattern`
+* Use `nltk.regexp_tokenize` and pass in our text, and the `pattern`
 
 
 ```python
@@ -137,6 +142,11 @@ what is the size of the total vocabulary used in Macbeth, once all stopwords hav
 
 Compute this in the cell below. 
 
+
+```python
+
+```
+
 ### Normalized Word Frequency
 
 Knowing the frequency with which each word is used is somewhat informative, but without the context of how many words are used in total, it doesn't tell us much. One way we can adjust for this is to use **_Normalized Word Frequency_**, which we can compute by dividing each word frequency by the total number of words. 
@@ -179,6 +189,11 @@ macbeth_finder = None
 macbeth_scored = None
 ```
 
+
+```python
+
+```
+
 These look a bit more interesting. We can see here that some of the most common ones are stage directions, such as 'Enter Macbeth' and 'Exeunt Scena', while others seem to be common phrases used in the play. 
 
 To wrap up our initial examination of _Macbeth_, let's end by calculating **_Mutual Information Scores_**.
@@ -203,7 +218,17 @@ macbeth_pmi_finder = None
 
 
 ```python
+
+```
+
+
+```python
 macbeth_pmi_scored = None
+```
+
+
+```python
+
 ```
 
 ## On Your Own: Comparative Corpus Statistics
@@ -217,6 +242,41 @@ In the cells below:
 2. Clean, preprocess, tokenize, and generate corpus statistics for this new corpus.   
 <br>   
 3. Perform a comparative analysis using the Macbeth statistics we generated above and your new corpus statistics. How are they similar? How are they different? Was there anything interesting or surprising that you found in your comparison? Create at least 1 meaningful visualization comparing the two corpora.
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
 
 ## Summary
 
