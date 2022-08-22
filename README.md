@@ -1,4 +1,3 @@
-
 # Corpus Statistics - Lab
 
 ## Introduction
@@ -21,6 +20,7 @@ In this lab, we'll load two different text corpora from NLTK's library of variou
 In the cell below:
 
 * Import `nltk`
+* Download `gutenberg` and `stopwords` from `nltk`
 * Import `gutenberg` and `stopwords` from `nltk.corpus`
 * Import everything (`*`) from `nltk.collocations`
 * Import `FreqDist` and `word_tokenize` from `nltk`
@@ -159,10 +159,10 @@ Compute this now in the cell below, and display the normalized word frequency fo
 ```python
 total_word_count = None
 macbeth_top_50 = None
-print('Word\t\t\tNormalized Frequency')
+print(f'{"Word":10} Normalized Frequency')
 for word in macbeth_top_50:
     normalized_frequency = None
-    print('{} \t\t\t {:.4}'.format(None, None))
+    print(f'{word[0]:10} {normalized_frequency:^20.4}')
 ```
 
 ## Creating Bigrams
