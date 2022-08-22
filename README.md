@@ -1,4 +1,3 @@
-
 # Corpus Statistics - Lab
 
 ## Introduction
@@ -21,6 +20,7 @@ In this lab, we'll load two different text corpora from NLTK's library of variou
 In the cell below:
 
 * Import `nltk`
+* Download `gutenberg` and `stopwords` from `nltk`
 * Import `gutenberg` and `stopwords` from `nltk.corpus`
 * Import everything (`*`) from `nltk.collocations`
 * Import `FreqDist` and `word_tokenize` from `nltk`
@@ -29,6 +29,8 @@ In the cell below:
 
 ```python
 import nltk
+nltk.download('gutenberg', quiet=True)
+nltk.download('stopwords', quiet=True)
 from nltk.corpus import gutenberg, stopwords
 from nltk.collocations import *
 from nltk import FreqDist
@@ -356,63 +358,63 @@ Compute this now in the cell below, and display the normalized word frequency fo
 ```python
 total_word_count = sum(macbeth_stopped_freqdist.values())
 macbeth_top_50 = macbeth_stopped_freqdist.most_common(50)
-print('Word\t\t\tNormalized Frequency')
+print(f'{"Word":10} Normalized Frequency')
 for word in macbeth_top_50:
     normalized_frequency = word[1] / total_word_count
-    print('{} \t\t\t {:.4}'.format(word[0], normalized_frequency))
+    print(f'{word[0]:10} {normalized_frequency:^20.4}')
 ```
 
-    Word			Normalized Frequency
-    macb 			 0.01354
-    haue 			 0.01206
-    thou 			 0.008601
-    enter 			 0.008008
-    shall 			 0.006723
-    macbeth 			 0.00613
-    thee 			 0.006031
-    vpon 			 0.005734
-    macd 			 0.005734
-    yet 			 0.005635
-    thy 			 0.005536
-    vs 			 0.005437
-    come 			 0.005339
-    king 			 0.005339
-    hath 			 0.005141
-    good 			 0.004844
-    rosse 			 0.004844
-    lady 			 0.004745
-    would 			 0.004647
-    time 			 0.004548
-    like 			 0.004251
-    say 			 0.003856
-    doe 			 0.003757
-    lord 			 0.003757
-    make 			 0.003757
-    tis 			 0.003658
-    must 			 0.003559
-    done 			 0.00346
-    selfe 			 0.00346
-    ile 			 0.00346
-    feare 			 0.00346
-    let 			 0.00346
-    man 			 0.003361
-    wife 			 0.003361
-    night 			 0.003361
-    banquo 			 0.003361
-    well 			 0.003262
-    know 			 0.003262
-    one 			 0.003164
-    great 			 0.003065
-    see 			 0.003065
-    may 			 0.003065
-    exeunt 			 0.002966
-    speake 			 0.002867
-    sir 			 0.002867
-    lenox 			 0.002768
-    mine 			 0.00257
-    vp 			 0.00257
-    th 			 0.00257
-    mal 			 0.002472
+    Word       Normalized Frequency
+    macb             0.01354       
+    haue             0.01206       
+    thou             0.008601      
+    enter            0.008008      
+    shall            0.006723      
+    macbeth          0.00613       
+    thee             0.006031      
+    vpon             0.005734      
+    macd             0.005734      
+    yet              0.005635      
+    thy              0.005536      
+    vs               0.005437      
+    come             0.005339      
+    king             0.005339      
+    hath             0.005141      
+    good             0.004844      
+    rosse            0.004844      
+    lady             0.004745      
+    would            0.004647      
+    time             0.004548      
+    like             0.004251      
+    say              0.003856      
+    doe              0.003757      
+    lord             0.003757      
+    make             0.003757      
+    tis              0.003658      
+    must             0.003559      
+    done             0.00346       
+    selfe            0.00346       
+    ile              0.00346       
+    feare            0.00346       
+    let              0.00346       
+    man              0.003361      
+    wife             0.003361      
+    night            0.003361      
+    banquo           0.003361      
+    well             0.003262      
+    know             0.003262      
+    one              0.003164      
+    great            0.003065      
+    see              0.003065      
+    may              0.003065      
+    exeunt           0.002966      
+    speake           0.002867      
+    sir              0.002867      
+    lenox            0.002768      
+    mine             0.00257       
+    vp               0.00257       
+    th               0.00257       
+    mal              0.002472      
 
 
 ## Creating Bigrams
@@ -579,41 +581,6 @@ In the cells below:
 1. Select another corpus from `gutenberg.fileids()`  
 2. Clean, preprocess, tokenize, and generate corpus statistics for this new corpus   
 3. Perform a comparative analysis using the Macbeth statistics we generated above and your new corpus statistics. How are they similar? How are they different? Was there anything interesting or surprising that you found in your comparison? Create at least one meaningful visualization comparing the two corpora 
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
 
 ## Summary
 
